@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/clockpicker.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animate.css">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Busso | Home</title>
+  </head>
+
+  <body class="red lighten-1">
+      <!-- header starts here -->
+      <nav class="red lighten-1" role="navigation">
+          <div class="nav-wrapper container">
+              <a href="#!" class="brand-logo c-logo">Busso<!--<img class="responsive-img" id="logo" src="images/busso_logo.png"/>--></a>
+              <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                  <li><a href="" >Home</a></li>
+                  <li><a href="" >About us</a></li>
+                  <li><a href="" >Contact us</a></li>
+              </ul>
+              <ul class="side-nav" id="mobile-demo">
+                  <li><a href="">Home</a></li>
+                  <li><a href="">About us</a></li>
+                  <li><a href="">Contact us</a></li>
+              </ul>
+          </div>
+      </nav>
+      <!-- header ends here -->
+      <main>
+<br>
+<!-- form begins -->
+
+
+        <div id="particles-js"></div>
+          <div class="row">
+              <div class=" container c-container">
+                  <form class="col s12" autocomplete="off" method="POST">
+                    <h5 class="header col  s12 white-text center c-h">Search</h5><br><br>
+                    <div class="card">
+                      <div class="card-content">
+                        <div class="row">
+                            <div class="input-field col  s12 ">
+                              <select class="icons">
+                                <option value="" disabled selected>Choose your district</option>
+                                <option value="" data-icon="images/ernakulam.jpg" class="left circle">Ernakulam</option>
+                              </select>
+                              <label>District</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col  s12 ">
+                            <select class="icons">
+                              <option value="" disabled selected>Choose your destination</option>
+                              <option value="" data-icon="images/ernakulam.jpg" class="left circle">Ernakulam</option>
+                            </select>
+                            <label>Destination</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col  s12 ">
+                            <select class="icons">
+                              <option value="" disabled selected>Choose your current stop</option>
+                              <option value="" data-icon="images/ernakulam.jpg" class="left circle">Ernakulam</option>
+                            </select>
+                            <label>Stop name</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 ">
+                                <input id="time1" type="text" class="validate timepicker" name="time1">
+                                <label for="time1">Set a starting time</label>
+                            </div>
+                            <div class="input-field col s6 ">
+                                <input id="time2" type="text" class="validate timepicker" name="time2">
+                                <label for="time2">Set an ending time</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col  s12 ">
+                              <select multiple>
+                               <option value="" disabled selected>Choose your bus preference</option>
+                               <option value="1">Private</option>
+                               <option value="2">KSRTC</option>
+                             </select>
+                             <label>What type of bus are you looking for?</label>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="input-field col  s12 center">
+                                <button id="submit" type="submit" class="waves-effect waves-light btn red lighten-1 c-btn" value="Search" name="search"><i class="material-icons">search</i></button>
+                            </div>
+                        </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+<!-- form ends -->
+      </main>
+
+      <footer class="page-footer red lighten-1">
+          <div class="container">
+              <div class="row">
+                  <div class="col l6 s12">
+                      <h5 class="white-text">Busso</h5>
+                      <p class="grey-text text-lighten-4">Making lives easier.<br>By Jackson and Ajmal</p>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-copyright">
+              <div class="container">
+                copyright 2017 all rights reserved
+              </div>
+          </div>
+      </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/clockpicker.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+         $(".button-collapse").sideNav();
+         $(document).ready(function() {
+            $('select').material_select();
+          });
+          $('.timepicker').pickatime({
+             twelvehour: true,
+             donetext: 'Done',
+             beforeShow: function() {
+               activeElement = $(document.activeElement)
+               activeForm = activeElement.closest('form')[0]
+             },
+           });
+           // Initialize Firebase
+           var config = {
+             apiKey: "AIzaSyCsHJQcCWOdOw92ryqfUXBGK--HCDasXes",
+             authDomain: "busso-aaca4.firebaseapp.com",
+             databaseURL: "https://busso-aaca4.firebaseio.com",
+             storageBucket: "busso-aaca4.appspot.com",
+             messagingSenderId: "499750275852"
+           };
+           firebase.initializeApp(config);
+           new WOW().init();
+    </script>
+    <style>
+    .c-btn{
+      width: 40% !important;
+    }
+    @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v19/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+    .c-h{
+      font-family: "Roboto", sans serif;
+      font-weight: 300;
+    }
+    .c-logo{
+      font-family: "Roboto", sans serif;
+      font-weight: 400;
+    }
+    .card, .side-nav, footer{
+      opacity: 0.83;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 90%;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      }
+      canvas {
+        display: block;
+        vertical-align: bottom;
+      }
+      nav{
+        box-shadow: none !important;
+      }
+      .c-container{
+        width: 50% !important;
+      }
+      @media only screen and (max-width: 769px) {
+        .c-container{
+          width: 90% !important;
+        }
+      }
+      body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+      }
+      main {
+          flex: 1 0 auto;
+      }
+      img.responsive-img{
+        padding-top: 6px;
+        max-width: 87% !important;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/clockpicker.css"/>
+    <link type="text/css" rel="stylesheet" href="css/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="theme-color" content="#ec423f" />
+    <title>Busso | Home</title>
+  </head>
+
+  <body class="grey lighten-4">
+      <!-- header starts here -->
+      <nav class="red c-navbar" role="navigation">
+          <div class="nav-wrapper container c-container">
+              <a href="#!" class="brand-logo">Busso<!--<img class="responsive-img c-logo" id="logo" src="images/busso_logo.png"/>--></a>
+              <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+              <ul class="right hide-on-med-and-down">
+                  <li class="home"><a>Home</a></li>
+                  <li class="about"><a>About us</a></li>
+                  <li class="contact"><a>Contact us</a></li>
+              </ul>
+              <ul id="slide-out" class="side-nav">
+                <li><div class="userView">
+                  <div class="background red lighten-1">
+                    <img src="images/bg8.jpg">
+                  </div>
+                  <a href="#!user" class="c-logoside white-text">Busso</a>
+                  <a href="#!name"><span class="white-text name">by Ajmal & Jackson</span></a>
+                  <a href="#!email"><span class="white-text email">made with all the love in the world</span></a>
+                </div></li>
+                <li class="home"><a class="waves-effect" href="#!"><i class="material-icons">view_quilt</i>Home</a></li>
+                <li class="about"><a class="waves-effect" href="#!"><i class="material-icons">perm_identity</i>About us</a></li>
+                <li class="contact"><a class="waves-effect" href="#!"><i class="material-icons">email</i>Contact us</a></li>
+              </ul>
+          </div>
+      </nav>
+      <!-- header ends here -->
+      <main class="wrapper">
+<br>
+<!-- form begins -->
+
+
+        <!-- <div id="particles-js"></div> -->
+          <div class="row" id="searchform">
+              <div class=" container c-container">
+                  <form class="col s12" autocomplete="off" method="POST">
+                    <h5 class="header col  s12 center c-h">Search</h5><br><br>
+                    <div class="card card-panel hoverable">
+                      <div class="card-content">
+                        <div class="row">
+                            <div class="input-field col  s12 ">
+                              <select class="icons">
+                                <option value="" disabled selected>Choose your district</option>
+                                <option value="" data-icon="images/ernakulam.jpg" class="left circle">Ernakulam</option>
+                              </select>
+                              <label>District</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col  s12 ">
+                            <select class="icons">
+                              <option value="" disabled selected>Choose your destination</option>
+                              <option value="" data-icon="images/ernakulam.jpg" class="left circle">Ernakulam</option>
+                            </select>
+                            <label>Destination</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="input-field col  s12 ">
+                            <select class="icons">
+                              <option value="" disabled selected>Choose your current stop</option>
+                              <option value="" data-icon="images/ernakulam.jpg" class="left circle">Ernakulam</option>
+                            </select>
+                            <label>Stop name</label>
+                          </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s6 ">
+                                <input id="time1" type="text" class="validate timepicker" name="time1">
+                                <label for="time1">Set a starting time</label>
+                            </div>
+                            <div class="input-field col s6 ">
+                                <input id="time2" type="text" class="validate timepicker" name="time2">
+                                <label for="time2">Set an ending time</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col  s12 ">
+                              <select multiple>
+                               <option value="" disabled selected>Choose your bus preference</option>
+                               <option value="1">Private</option>
+                               <option value="2">KSRTC</option>
+                             </select>
+                             <label>What type of bus are you looking for?</label>
+                            </div>
+                        </div>
+                         <div class="row">
+                            <div class="input-field col  s12 center">
+                                <button id="submit" type="submit" class="waves-effect waves-light btn red c-btn" value="Search" name="search"><i class="material-icons">search</i></button>
+                            </div>
+                        </div>
+                  </form>
+              </div>
+          </div>
+        </div>
+      </div>
+<!-- form ends -->
+
+<!-- aboutus -->
+          <div class="row" id="aboutus" style="display:none">
+              <div class=" container c-container">
+                    <div class="card card-panel hoverable">
+                      <div class="card-content">
+                        <div class="row">
+                          <h5 class="header col  s12 center c-h">About us</h5><br><br>
+                          <p class="center col s12">We have a dream to leave a mark on this magnificient
+                            world, what better way to do that than to help others. <br />
+                            Busso is our way of giving back to the community.
+                            <br />
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+<!-- about us ends -->
+<!-- contact us -->
+          <div class="row" id="contactus" style="display:none">
+              <div class=" container c-container">
+                    <div class="card card-panel hoverable">
+                      <div class="card-content">
+                        <div class="row">
+                          <h5 class="header col  s12 center c-h">Contact us</h5><br><br>
+                          <p class="center col s12">Hey there! we'd love to hear from you! <br />
+                            Drop in an email and we'll get back to you ASAP!
+                          <h5 class="center col s12">hi@busso.com</h5><br />
+                        </p>
+                      </div>
+                      </div>
+                    </div>
+              </div>
+          </div>
+<!-- contact us ends -->
+
+      </main>
+
+      <footer class="page-footer red">
+          <div class="container">
+              <div class="row">
+                  <div class="col l6 s12">
+                      <h5 class="white-text c-footer-brand">Busso</h5>
+                      <p class="grey-text text-lighten-4">Made with all the love in the world.<br>By Jackson and Ajmal</p>
+                  </div>
+              </div>
+          </div>
+          <div class="footer-copyright">
+              <div class="container">
+                copyright 2017 all rights reserved
+              </div>
+          </div>
+      </footer>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/init.js"></script>
+    <!-- <script src="js/particles.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/clockpicker.js"></script>
+    <script>
+          $('.about').click(function(){
+                $('#searchform').hide("fast");
+                $('#contactus').hide("fast");
+                $('#aboutus').show("fast");
+          });
+          $('.home').click(function(){
+                $('#contactus').hide("fast");
+                $('#aboutus').hide("fast");
+                $('#searchform').show("fast");
+          });
+          $('.contact').click(function(){
+                $('#searchform').hide("fast");
+                $('#aboutus').hide("fast");
+                $('#contactus').show("fast");
+          });
+          $('.button-collapse').sideNav({
+          menuWidth: 280, // Default is 240
+          edge: 'left', // Choose the horizontal origin
+          closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+          draggable: true // Choose whether you can drag to open on touch screens
+          }
+          );
+
+         $(".button-collapse").sideNav();
+
+         $(document).ready(function() {
+            $('select').material_select();
+          });
+
+          $('.timepicker').pickatime({
+             twelvehour: true,
+             donetext: 'Done',
+             beforeShow: function() {
+               activeElement = $(document.activeElement)
+               activeForm = activeElement.closest('form')[0]
+             },
+           });
+    </script>
+
+
+
+    <style>
+    .c-footer-brand{
+      font-family: 'Lobster',cursive;
+      font-size: 2.4rem !important;
+    }
+    .brand-logo{
+      padding-left: 2% !important;
+      font-family: 'Lobster', cursive;
+    }
+    .c-logoside{
+      padding-top: 3.3em !important;
+      font-family: 'Lobster', cursive;
+      font-size: 4rem !important;
+    }
+    .c-btn{
+      width: 60% !important;
+    }
+    @font-face {
+    font-family: 'Material Icons';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v19/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+    .c-h{
+      font-family: "Roboto", sans serif;
+      font-weight: 300;
+    }
+    nav .button-collapse i {
+      font-size: 2.7rem;
+      height: 56px;
+      line-height: 56px;
+    }
+    #particles-js {
+      position: absolute;
+      width: 100%;
+      height: 90%;
+      background-image: url("");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50% 50%;
+      }
+      canvas {
+        display: block;
+        vertical-align: bottom;
+      }
+      .c-container{
+        width: 50% !important;
+      }
+      @media only screen and (max-width: 769px) {
+        .c-container{
+          width: 99% !important;
+        }
+
+        img.responsive-img{
+          height: 53px !important;
+          width: auto;
+        }
+
+        .c-btn{
+          width: 100% !important;
+        }
+      }
+      body {
+          display: flex;
+          min-height: 100vh;
+          flex-direction: column;
+      }
+      main {
+          flex: 1 0 auto;
+      }
+      img.responsive-img{
+        padding-top: 6px;
+        max-width: 87% !important;
+      }
+    </style>
+  </body>
+</html>
